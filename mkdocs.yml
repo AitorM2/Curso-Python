@@ -1,0 +1,9 @@
+site_name: "Documentación de Python con explicaciones y ejemplos"
+
+nav:
+  - Inicio: index.md
+  - Variables: variables/variables.md
+
+theme:
+  name: "readthedocs"  
+
