@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Strings - Documentación de Python con explicaciones y ejemplos</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Strings";
+        var mkdocs_page_input_path = "strings\\strings.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentación de Python con explicaciones y ejemplos
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../guia_de_instalacion/guia_instalacion/">Guía de instalación de Python usando visual studio code</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../variables/variables/">Variables</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Strings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#acceder-a-caracteres-de-una-palabra">Acceder a caracteres de una palabra</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dividir-palabras">Dividir palabras</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#omitir-caracteres-de-una-palabra">Omitir caracteres de una palabra</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#obtener-longitud-de-una-frase-o-de-una-palabra">Obtener longitud de una frase o de una palabra</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#descomponer-una-palabra-letra-por-letra">Descomponer una palabra letra por letra</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#concatenar-palabras-letras-o-frases">Concatenar palabras, letras o frases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introducir-por-valores-por-teclado">Introducir por valores por teclado</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metodos-que-se-pueden-usar-con-los-strings">Métodos que se pueden usar con los strings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-capitalize">Método capitalize()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-count">Método count()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-endswith">Método endswith()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-expandtabs">Método expandtabs()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-find">Método find()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-format">Método format()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-index">Método index()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isalnum">Método isalnum()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isalpha">Método isalpha()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isdecimal">Método isdecimal()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isdigit">Método isdigit()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isidentifier">Método isidentifier()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-islower">Método islower()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isupper">Método isupper()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-isnumeric">Método isnumeric()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-join">Método join()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-strip">Método strip()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-replace">Método replace()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-split">Método split()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-title">Método title()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-swapcase">Método swapcase()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metodo-startswith">Método startswith()</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentación de Python con explicaciones y ejemplos</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Strings</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aqui-se-van-a-mostrar-las-diferentes-cosas-que-se-pueden-hacer-con-las-strings">Aquí se van a mostrar las diferentes cosas que se pueden hacer con las strings</h1>
+<h2 id="acceder-a-caracteres-de-una-palabra">Acceder a caracteres de una palabra</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de como se acceder a una letra de una palabra.</p>
+</blockquote>
+<ul>
+<li>Ejemplo para acceder a la primera letra</li>
+</ul>
+<pre><code class="language-python"># Definimos la palabra
+palabra = &quot;Papel&quot;
+
+# Definimos la variable donde vamos a almacenar la primera letra
+# y como si fuera una array le decimos que vamos a acceder a la primera posición
+# en este caso le ponemos el número cero (0)
+primera_letra = palabra[0]
+
+# Mostramos por pantalla la palabra
+print(palabra) # Resultado -&gt; Papel
+
+# Mostramos por pantalla la letra a la que hemos accedido
+print(primera_letra) # Resultado -&gt; P
+</code></pre>
+<ul>
+<li>Ejemplo para acceder a la tercera letra</li>
+</ul>
+<pre><code class="language-python"># Definimos la palabra
+palabra = &quot;Piedra&quot;
+
+# Definimos la variable donde vamos a almacenar la tercera letra
+# y como si fuera una array le decimos que vamos a acceder a la tercera posición
+# en este caso le ponemos el número dos (2)
+tercera_letra = palabra[2]
+
+# Mostramos por pantalla la palabra
+print(&quot;\n&quot; + palabra) # Resultado -&gt; Piedra
+
+# Mostramos por pantalla la letra a la que hemos accedido
+print(tercera_letra) # Resultado -&gt; e
+</code></pre>
+<h2 id="dividir-palabras">Dividir palabras</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de como dividir una palabra dejando los caracteres deseados.</p>
+</blockquote>
+<ul>
+<li>Ejemplo para coger las tres primeras letras</li>
+</ul>
+<pre><code class="language-python"># Definimos la palabra
+palabra = 'Sustraer'
+
+# Vamos a obtener las tres primeras letras, para realizar esto lo tratamos como una array,
+# le decimos que empieze en la posición cero y termine en la tres pero al decirle que termine 
+# en la tres no nos va a incluir la letra que esta en la posición seis
+primeras_tres = palabra[0:3]
+
+# Mostramos la palabra completa
+print(palabra)
+
+# Mostramos por pantalla las tres primeras letras de la palabra
+print(primeras_tres) # Resultado -&gt; Sus
+
+</code></pre>
+<ul>
+<li>Ejemplo para coger las tres ultimas letras</li>
+</ul>
+<pre><code class="language-python">
+# Definimos la palabra
+palabra = 'Atrapar'
+
+# Ahora vamos a obtener las tres últimas letras, para realizar esto lo tratamos como una array,
+# le decimos que empieze en la posición cuatro y termine en la siete pero al decirle que termine 
+# en la siete no nos va a incluir la letra que esta en la posición siete
+ultimas_tres = palabra[4:7]
+
+# Mostramos la palabra completa
+print(palabra)
+
+# Mostramos por pantalla las ultimas tres letras de la palabra
+print(ultimas_tres) # Resultado -&gt; par
+</code></pre>
+<h2 id="omitir-caracteres-de-una-palabra">Omitir caracteres de una palabra</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de como omitir caracteres de una palabra.</p>
+</blockquote>
+<pre><code class="language-python"># Definimos la frase
+frase = &quot;Convivir&quot;
+
+# Definimos la variable donde vamos a almacenar la frase con caracteres omitidos
+# para realizar esto tenemos que tratarlo como una array le decimos que empieze en la letra
+# que se encuentra en la posición cero y que se detenga antes de llegar a la letra en la posición 7
+# después le decimos que coja una letra y se salte otra de forma alternada, es decir, en este caso coge
+# las letras que se encuentran en las posiciones 0, 2, 4 y 6  
+frase_final = frase[0:7:2]
+
+# Mostramos por pantalla la frase antes de realizar la omisión de letras
+print(frase)
+
+# Mostramos por pantalla el resultado 
+print(frase_final) # Resultado -&gt; Cnii
+</code></pre>
+<h2 id="obtener-longitud-de-una-frase-o-de-una-palabra">Obtener longitud de una frase o de una palabra</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de como obtener la longitud de una frase o una palabra usando el método <strong>len()</strong>.</p>
+</blockquote>
+<ul>
+<li>Ejemplo de explicación para obtener la longitud de una sola letra</li>
+</ul>
+<pre><code class="language-python"># Definimos la letra 
+letra = &quot;A&quot;
+
+# Mostramos por pantalla la letra
+print(letra) # Resultado -&gt; A
+
+# Mostramos por pantalla la longitud de la letra, para mostrar la longitud usamos
+# la función predefinida que tiene python len()
+print(len(letra)) # Resultado -&gt; 1
+</code></pre>
+<ul>
+<li>Ejemplo para obtener la longitud de una palabra</li>
+</ul>
+<pre><code class="language-python"># Definimos la palabra
+palabra = &quot;Picapica&quot;
+
+# Mostramos por pantalla la palabra
+print(palabra) # Resultado -&gt; Picapica
+
+# Mostramos por pantalla la longitud de la palabra, para mostrar la longitud usamos
+# la función predefinida que tiene python len()
+print(len(palabra)) # Resultado -&gt; 8
+</code></pre>
+<ul>
+<li>Ejemplo para obtener la longitud de una frase</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase = &quot;He comprado manzanas para merendar&quot;
+
+# Mostramos por pantalla la frase
+print(frase) # Resultado -&gt; He comprado manzanas para merendar
+
+# Mostramos por pantalla la longitud de la frase, para mostrar la longitud usamos
+# la función predefinida que tiene python len()
+print(len(frase)) # Resultado -&gt; 34
+</code></pre>
+<h2 id="descomponer-una-palabra-letra-por-letra">Descomponer una palabra letra por letra</h2>
+<blockquote>
+<p>En este apartado vamos a ver un ejemplo de como descomponer una palabra.</p>
+</blockquote>
+<pre><code class="language-python"># Definimos el nombre de la variable y le introducimos el texto deseado
+palabra = &quot;Hola&quot;
+
+# Para descomponer la palabra definimos diferentes variables para cada caracter que tenga nuestra frase
+# y despues le decimos que esas variables van a ser igual a la variable de la palabra
+a,b,c,d = palabra
+
+# Mostramos por pantalla la palabra sin descomponer 
+print(&quot;Frase sin descomponer: &quot; + palabra)
+
+# Mostramos por pantalla variable por variable que hemos creado anteriormente, esto nos mostraria cada caracter
+print(&quot;\nFrase descompuesta caracter por caracter: &quot;)
+print(a) # Caracter -&gt; H
+print(b) # Caracter -&gt; O
+print(c) # Caracter -&gt; L
+print(d) # Caracter -&gt; A
+</code></pre>
+<h2 id="concatenar-palabras-letras-o-frases">Concatenar palabras, letras o frases</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de como concatenar cadenas de texto.</p>
+</blockquote>
+<ul>
+<li>Ejemplo para concatenar sin espacios</li>
+</ul>
+<pre><code class="language-python"># Definimos la primera palabra o frase
+Nombre = &quot;Luis&quot;
+# Definimos la segunda palabra o frase
+Apellido = &quot;Martinez&quot;
+
+print(&quot;Concatenación sin espacios: &quot;)
+
+# Mostramos por pantalla la concatenación, para concatenar palabras o frases 
+# utilizamos el signo mas(+) para indicarle que queremos unir esas dos varibles
+print(Nombre + Apellido) # Resultado -&gt; LuisMartinez
+</code></pre>
+<ul>
+<li>Ejemplo para concatenar con espacios</li>
+</ul>
+<pre><code class="language-python"># Definimos la primera palabra o frase
+Nombre = &quot;Laura&quot;
+# Definimos la segunda palabra o frase
+Apellido = &quot;Gonzalez&quot;
+# Definimos el separador que queremos utilizar, es decir, le podemos dar
+# cualquier nombre a la variable pero es recomendable darle un nombre significativo
+# en este caso lo vamos a separar con espacios
+espacio = ' '
+
+print(&quot;\nConcatenación con espacio: &quot;)
+
+# Mostramos por pantalla la concatenación incluyendo el separador, es decir, la variable espacio
+print(Nombre + espacio + Apellido) # Resultado -&gt; Laura Gonzalez
+</code></pre>
+<ul>
+<li>Ejemplo para concatenar con puntos, asteriscos, guiones, etc</li>
+</ul>
+<pre><code class="language-python"># Definimos la primera palabra o frase
+Nombre = &quot;Paco&quot;
+# Definimos la segunda palabra o frase
+Apellido = &quot;Rodriguez&quot;
+# Definimos el separador que queremos utilizar, es decir, le podemos dar
+# cualquier nombre a la variable pero es recomendable darle un nombre significativo
+# en este caso lo vamos a separar con puntos
+punto = '.'
+
+print(&quot;\nConcatenación con punto: &quot;)
+
+# Mostramos por pantalla la concatenación incluyendo el separador, es decir, la variable espacio
+print(Nombre + punto + Apellido) # Resultado -&gt; Paco.Rodriguez
+</code></pre>
+<h2 id="introducir-por-valores-por-teclado">Introducir por valores por teclado</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de como introducir valores por teclado con el método <strong>input()</strong>, en este ejemplo pide que introduzcamos números pero podemos cambiar ese texto y pedir lo que necesitamos.</p>
+</blockquote>
+<ul>
+<li>Caso para números</li>
+</ul>
+<pre><code class="language-python"># Definimos la variable que va a almacenar el valor que vamos a introducir
+numero = input(&quot;Introduce un número: &quot;)
+
+# Mostramos por pantalla el valor introducido
+print(numero)
+</code></pre>
+<ul>
+<li>Caso en el que queramos que introduzcan texto</li>
+</ul>
+<pre><code class="language-python"># Definimos la variable que va a almacenar el valor que vamos a introducir
+texto = input(&quot;Introduce una palabra: &quot;)
+
+# Mostramos por pantalla el valor introducido
+print(texto)
+</code></pre>
+<h2 id="metodos-que-se-pueden-usar-con-los-strings">Métodos que se pueden usar con los strings</h2>
+<blockquote>
+<p>En este apartado vamos a ver ejemplos de los diferentes métodos que hay y que se pueden usan.</p>
+</blockquote>
+<h3 id="metodo-capitalize">Método capitalize()</h3>
+<ul>
+<li>Método capitalize(): Este método se usa para convertir la primera palabra de una frase a mayúsculas.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase1 = &quot;el sol brilla mucho&quot;
+
+print(&quot;Método capitalize(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase1)
+
+# Mostramos por pantalla la frase con la primera letra en mayúsculas usando el método capitalize()
+print(frase1.capitalize()) # Resultado -&gt; El sol brilla mucho
+</code></pre>
+<h3 id="metodo-count">Método count()</h3>
+<ul>
+<li>Método count(): Este método se usa para contar cuantas veces aparece una letra en la frase.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase2 = &quot;el coche aparcado es rojo&quot;
+
+print(&quot;\nMétodo count(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase2)
+
+# Mostramos por pantalla el conteo de Oes que tiene la frase usando el método count()
+print(frase2.count('o')) # Resultado -&gt; 4
+</code></pre>
+<h3 id="metodo-endswith">Método endswith()</h3>
+<ul>
+<li>Método endswith(): Este método se usa para comprobar si una frase termina con algo en específico,
+este método es un boolean, es decir, si acaba de esa forma o no (true o false).</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase3 = &quot;los arboles son altos&quot;
+
+print(&quot;\nMétodo endswith(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase3)
+
+# Mostramos por pantalla si esa frase acaba de la forma que le decimos o no
+print(frase3.endswith(&quot;os&quot;)) # Resultado -&gt; True
+print(frase3.endswith(&quot;los&quot;)) # Resultado -&gt; False
+</code></pre>
+<h3 id="metodo-expandtabs">Método expandtabs()</h3>
+<ul>
+<li>Método expandtabs(): Este método se usa para reemplazar todos los caracteres de tabulación (\t)
+en una frase por un número específico de espacios.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase4 = &quot;Me\tvoy\tde\tvacaciones&quot;
+
+print(&quot;\nMétodo expandtabs(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase4)
+
+# Mostramos por pantalla la frase con los espacios deseados
+print(frase4.expandtabs(0)) # Resultado -&gt; Mevoydevacaciones
+print(frase4.expandtabs(20)) # Resultado -&gt; Me                  voy                 de                  vacaciones
+</code></pre>
+<h3 id="metodo-find">Método find()</h3>
+<ul>
+<li>Método find(): Este método se usa para buscar una palabara específica en una frase y nos devuelve 
+el número en el que empieza y aparece esa palabra. Si esa palabra no se encuentra devuelve -1.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase5 = &quot;Bienvenidos al curso de programacion&quot;
+
+print(&quot;\nMétodo find(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase5)
+
+# Mostramos por pantalla el número de donde aparece por primera vez esa palabra 
+# y si no existe muestra -1
+
+print(frase5.find(&quot;curso&quot;)) # Resultado -&gt; 15
+print(frase5.find(&quot;hola&quot;)) # Resultado -&gt; -1
+</code></pre>
+<h3 id="metodo-format">Método format()</h3>
+<ul>
+<li>Método format(): Este método se usa para dar formato a Strings, permitiendo insertar valores
+dentro de un texto utilizando marcadores de posición {}. Esta es una forma poderosa y flexible
+de construir cadenas.</li>
+</ul>
+<pre><code class="language-python"># Definimos las variables que vamos a usar para dar formato
+nombre6 = &quot;Pedro&quot;
+apellido6 = &quot;Martinez&quot;
+
+# Definimos la frase que contiene las variables usadas para dar formato
+
+frase6_formato = &quot;Hola {} {}, bienvenido al sistema&quot;.format(nombre6, apellido6)
+
+print(&quot;\nMétodo format(): &quot;)
+
+# Mostramos por pantalla la String con el formato
+print(frase6_formato) # Resultado -&gt; Hola Pedro Martinez, bienvenido al sistema
+</code></pre>
+<h3 id="metodo-index">Método index()</h3>
+<ul>
+<li>Método index(): Este método es similar al método find() se usa para buscar una subcadena dentro 
+dentro de una cadena y nos devuelve el índice de la primera aparición. Sin embargo, a diferencia
+del método find(), si la subcadena no se encuentra, index() lanza una expcepción llamada ValueError.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase7 = &quot;Aprender python es divertido&quot;
+
+print(&quot;\nMétodo index(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase7)
+
+# Mostramos por pantalla el numero de veces que aparece una letra o conjunto de letras y  
+# si no lo encuentra nos muestra el error ValueError
+print(frase7.index(&quot;e&quot;)) # Resultado -&gt; 3
+</code></pre>
+<h3 id="metodo-isalnum">Método isalnum()</h3>
+<ul>
+<li>Método isalnum(): Este método se usa para verificar si todos los caracteres de una cadena son
+alfanuméricos, es decir, si son letras (a-z, A-Z) o son número (0-9).</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase sin espacios
+frase8 = &quot;TreintaDiasDePython&quot;
+
+# Definimos la frase con espacios
+frase81 = &quot;Ejemplos de Python&quot;
+
+print(&quot;\nMétodo isalnum(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase8)
+print(frase81)
+
+# Mostramos por pantalla si la cadena contiene valores alfanuméricos mostrandonos true y 
+# en caso de que contenga espacios nos motrará false ya que los espacios no son alfanuméricos
+print(frase8.isalnum()) # Resultado -&gt; true
+print(frase81.isalnum()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-isalpha">Método isalpha()</h3>
+<ul>
+<li>Método isalpha(): Este método se usa para verificar si todos los caracteres de una cadena son
+alfabéticos, es decir, si son letras (a-z, A-Z).</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase sin numeros
+frase9 = &quot;Vivoenunchalet&quot;
+
+# Definimos la frase con numeros
+frase91= &quot;Elnumeroesel29&quot;
+
+print(&quot;\nMétodo isalpha(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase9)
+print(frase91)
+
+# Mostramos por pantalla si la cadena contiene valores alfabéticos mostrandonos true y 
+# en caso de que contenga números nos motrará false ya que los número no son alfabéticos
+# otro caso que nos puede mostrar false es una frase con espacios, ya que los espacios
+# no son alfabéticos
+print(frase9.isalpha()) # Resultado -&gt; true
+print(frase91.isalpha()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-isdecimal">Método isdecimal()</h3>
+<ul>
+<li>Método isdecimal(): Este método se usa para verificar si todos los caracteres de una cadena son
+número decimales, esto significa que la cadena solo puede contener número enteros sin decimales
+sin signos negativos, ni otros caracteres no númericos.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase con números decimales
+frase10 = &quot;1234&quot;
+
+# Definimos la frase sin numeros decimales
+frase101= &quot;-5678&quot;
+
+print(&quot;\nMétodo isdecimal(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase10)
+print(frase101)
+
+# Mostramos por pantalla si la cadena contiene valores decimales mostrandonos true y 
+# en caso de que contenga dígitos no decimales nos motrará false ya que como se ha mencionado
+# anteriormente si contiene signo negativo u otros caracteres nos mostrará false
+print(frase10.isdecimal()) # Resultado -&gt; true
+print(frase101.isdecimal()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-isdigit">Método isdigit()</h3>
+<ul>
+<li>Método isdigit(): Este método es un método incorporado que se usa para verificar si todos 
+los caracteres de una cadena está formada únicamente por números, sin embargo, isdigit()
+es más amplio que isdecimal(), ya que también acepta otros tipos de dígitos numéricos que 
+no sean solo número del 0-9, como los números en otros sistemas numéricos
+(como por ejemplo, números romanos o dígitos de otros alfabetos).</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase con números decimales
+frase11 = &quot;1234&quot;
+
+# Definimos la frase sin numeros decimales
+frase111= &quot;567.8&quot;
+
+print(&quot;\nMétodo isdigit(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase11)
+print(frase111)
+
+# Mostramos por pantalla si la cadena contiene valores decimales mostrandonos true y 
+# en caso de que contenga dígitos no decimales nos motrará false ya que como se ha mencionado
+# anteriormente si contiene signo negativo u otros caracteres nos mostrará false
+print(frase11.isdigit()) # Resultado -&gt; true
+print(frase111.isdigit()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-isidentifier">Método isidentifier()</h3>
+<ul>
+<li>Método isidentifier(): Este método se usa para comprobar si una cadena es un 
+identificador válido en Pyhton. Un identificador es una secuencia de caracteres 
+que puede ser utilizada como nombre para variables, funciones, clases, etc.</li>
+</ul>
+<p>Para que una cadena sea un identificador válido en Python, debe seguir estas reglas:</p>
+<ul>
+<li>Solo puede contener letras (Mayúsculas o minusculas), digitos (0-9) y guiones bajos ( _ ).</li>
+<li>No puede comenzar con un número.</li>
+<li>No puede ser una palabra reservada como (if, for, while, etc).</li>
+</ul>
+<pre><code class="language-python">print(&quot;\nMétodo isidentifier(): &quot;)
+
+# Mostramos por pantalla si los siguientes nombres de variables son identificadores válidos
+
+print(&quot;variable1&quot;.isidentifier()) # Resultado -&gt; true
+print(&quot;1variable&quot;.isidentifier()) # Resultado -&gt; false | Ya que comienza con un número (Regla 2)
+print(&quot;mi_variable&quot;.isidentifier()) # Resultado -&gt; true 
+</code></pre>
+<h3 id="metodo-islower">Método islower()</h3>
+<ul>
+<li>Método islower(): Este método se usa para comprobar si todas las letras de una cadena de texto son minúsculas.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase en minusculas
+frase13 = &quot;hola&quot;
+
+# Definimos la frase con una letra en mayusculas
+frase131 = &quot;Prueba&quot;
+
+print(&quot;\nMétodo islower(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase13)
+print(frase131)
+
+# Mostramos por pantalla si las siguientes cadenas estan en minusculas o no, si estan en minusculas nos 
+# devolverá true en caso contrario nos mostrará false
+
+print(frase13.islower()) # Resultado -&gt; true
+print(frase131.islower()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-isupper">Método isupper()</h3>
+<ul>
+<li>Método isupper(): Este método se usa para comprobar si todas las letras de una cadena de texto son mayúsculas.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase en minusculas
+frase14 = &quot;COCHE&quot;
+
+# Definimos la frase con una letra en mayusculas
+frase141 = &quot;moto&quot;
+
+print(&quot;\nMétodo isupper(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase14)
+print(frase141)
+
+# Mostramos por pantalla si las siguientes cadenas estan en mayusculas o no, si estan en mayusculas nos 
+# devolverá true en caso contrario nos mostrará false
+
+print(frase14.isupper()) # Resultado -&gt; true
+print(frase141.isupper()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-isnumeric">Método isnumeric()</h3>
+<ul>
+<li>Método isnumeric(): Este método se usa para comprobar si toda la cadena consiste en números, es decir, 
+que la frase debe contener solo números y no puede contener letras, espacios o símbolos.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase con numeros
+frase15 = &quot;123&quot;
+
+# Definimos la frase con numeros y letras
+frase151 = &quot;456abc&quot;
+
+print(&quot;\nMétodo isnumeric(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase15)
+print(frase151)
+
+# Mostramos por pantalla si las siguientes cadenas estan formadas solo por numeros o no, 
+# si estan formada solo por números nos devolverá true en caso contrario nos mostrará false
+
+print(frase15.isnumeric()) # Resultado -&gt; true
+print(frase151.isnumeric()) # Resultado -&gt; false
+</code></pre>
+<h3 id="metodo-join">Método join()</h3>
+<ul>
+<li>Método join(): Este método se usa para unir una secuencia ya sea una lista, tupla o cualquier otro itinerable
+de cadena de texto en una sola cadena. Este método coge como argumento un itinerable que contiene cadenas y 
+la concatena, usando el string que lo llama como separador.</li>
+</ul>
+<pre><code class="language-python"># Definimos la sentencia
+frase16 = [&quot;peras&quot;, &quot;uvas&quot;, &quot;sandias&quot;]
+
+# Definimos el resultado separado con espacios
+frase161 = &quot; &quot;.join(frase16)
+
+# Definimos el resultado separado con guiones
+frase162 = &quot;-&quot;.join(frase16)
+
+print(&quot;\nMétodo join(): &quot;)
+
+# Mostramos por pantalla la sentencia
+print(frase16)
+
+# Mostramos por pantalla los resultados concatenados
+print(frase161) # Resultado -&gt; peras uvas sandias
+print(frase162) # Resultado -&gt; peras-uvas-sandias
+</code></pre>
+<h3 id="metodo-strip">Método strip()</h3>
+<ul>
+<li>Método strip(): Este método se usa para eliminar los espacios en blanco o caracteres especificados
+al principio o al final de una cadena de texto. No elimina los caracteres del medio de la cadena,
+solo elimina los del principio y los del final.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase con espacios en blanco
+frase17 = &quot; Hola, que tal? &quot;
+
+print(&quot;\nMétodo strip(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase17)
+
+# Mostramos por pantalla los resultados usando el método strip()
+print(frase17.strip()) # Resultado -&gt; Hola, que tal?
+</code></pre>
+<h3 id="metodo-replace">Método replace()</h3>
+<ul>
+<li>Método replace(): Este método se usa para reemplazar una subcadena específica en una cadena por
+otra subcadena. Este método no modifica la cadena original, sino que devuelve una nueva con las
+situaciones realizadas.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase18 = &quot;Estoy aprendiendo java&quot;
+
+print(&quot;\nMétodo replace(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase18)
+
+# Mostramos por pantalla la frase reemplazando java por python
+print(frase18.replace('java', 'python')) # Resultado -&gt; Estoy aprendiendo python
+</code></pre>
+<h3 id="metodo-split">Método split()</h3>
+<ul>
+<li>Método split(): Este método se usa para dividir una cadena en una lista de subcadenas, utilizando un
+delimitador específico como un espacio, una coma, etc. Si no se especifica un delimitador, divide
+la cadena en cada espacio en blanco.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase con division por espacios
+frase19 = &quot;Bienvenido a Python&quot;
+
+print(&quot;\nMétodo split(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase19)
+
+# Mostramos por pantalla la frase dividida
+print(frase19.split()) # Resultado -&gt; ['Bienvenido', 'a', 'Python']
+</code></pre>
+<h3 id="metodo-title">Método title()</h3>
+<ul>
+<li>Método title(): Este método se usa para devolver una cadena donde la primera letra de cada palabra
+esta en mayuscula y el resto de las letras estan en minuscula. Este método es util para formatear
+titulos o nombres de manera consistente.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase20 = &quot;mi casa es blanca&quot;
+
+print(&quot;\nMétodo title(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase20)
+
+# Mostramos por pantalla la frase modificando las primeras letras
+print(frase20.title()) # Resultado -&gt; Mi Casa Es Blanca
+</code></pre>
+<h3 id="metodo-swapcase">Método swapcase()</h3>
+<ul>
+<li>Método swapcase(): Este método se usa para devolver una nueva cadena donde las letras en mayusculas
+se convierten en minuscula y las letras en minuscula se convierten en mayuscula. Este método es 
+util para invertir rapidamente el caso de los caracteres en una cadena.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase21 = &quot;Fruteria Paco&quot;
+
+print(&quot;\nMétodo swapcase(): &quot;)
+
+# Mostramos por pantalla la frase original
+print(frase21)
+
+# Mostramos por pantalla la frase modificando las mayusculas y las minusculas
+print(frase21.swapcase()) # Resultado -&gt; Fruteria Paco
+</code></pre>
+<h3 id="metodo-startswith">Método startswith()</h3>
+<ul>
+<li>Método startswith(): Este método se usa para verificar si una cadena comienza con una subcadena específica
+devuelve un valor booleano true si la cadena comienza con la subcadena especificada
+o false si no comienza con la subcadena.</li>
+</ul>
+<pre><code class="language-python"># Definimos la frase
+frase22 = &quot;Que te calles&quot;
+frase221 = &quot;Esto es un chorizo&quot;
+
+print(&quot;\nMétodo startswith(): &quot;)
+
+# Mostramos por pantalla las frases originales
+print(frase22)
+print(frase221)
+
+# Mostramos por pantalla las frases mostrando si tienen ese comienzo o no
+print(frase22.startswith(&quot;Que&quot;)) # Resultado -&gt; true 
+print(frase221.startswith(&quot;chorizo&quot;)) # Resultado -&gt; false
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../variables/variables/" class="btn btn-neutral float-left" title="Variables"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../variables/variables/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
