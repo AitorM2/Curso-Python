@@ -29,10 +29,11 @@ array = ["uno", "dos", "tres", "cuatro"]
 * Definición de una variable de tipo diccionario, es decir, una colección no ordenada de pares clave-valor. En lugar de usar índices numéricos como en las listas, usamos claves para acceder a los valores.
 ``` python
 diccionario = {
-    "Nombre: " "Paco",
-    "Apellido: " "Martinez",
-    "ciudad:" "Madrid"
+        'Nombre': 'Paco', 
+        'Apellido': 'Martinez', 
+        'Ciudad': 'Madrid'
 }
+
 ```
 
 ## Mostrar valores por consola con print()
@@ -60,7 +61,7 @@ print(array) # Resultado -> ["uno", "dos", "tres", "cuatro"]
 ```
 
 ``` python
-print(diccionario) # Resultado -> {'Nombre: Paco', 'Apellido: Martinez', 'ciudad:Madrid'}
+print(diccionario) # Resultado -> {'Nombre': 'Paco', 'Apellido': 'Martinez', 'Ciudad': 'Madrid'}
 ```
 ## Mostrar por pantalla el tipo que tiene la variable
 
@@ -106,4 +107,47 @@ nombre, edad, es_mayor, pie = "Luis", 25, True, 42.5
 ``` python
     print(Informacion['Nombre'], Informacion['Edad']) # Resultado -> Pedro 24
 ```
-    
+## Ejemplo de código para probar su funcionamiento implementando todo lo anterior mencionado
+
+**Paso 1.** Creamos nuestro archivo llamado `ejemplo1.py`.
+
+**Paso 2.** Pegaremos el siguiente código y le daremos al boton de ejecutar
+
+``` python
+
+# Definición de las variables
+
+entero = 1
+double = 3.5
+string = "Hola"
+boolean = False
+array = ["uno", "dos", "tres", "cuatro"]
+diccionario = {
+    "Nombre: " "Paco",
+    "Apellido: " "Martinez",
+    "ciudad:" "Madrid"
+}
+
+# Mostramos por pantalla las variables
+
+print("Valor de cada variable: ")
+
+print(entero) # Resultado -> 1
+print(double) # Resultado -> 3.5
+print(string) # Resultado -> Hola
+print(boolean) # Resultado -> False
+print(array) # Resultado -> ["uno", "dos", "tres", "cuatro"]
+print(diccionario) # Resultado -> {'Nombre: Paco', 'Apellido: Martinez', 'ciudad:Madrid'}
+
+# Mostramos por pantalla de que tipo tiene cada variable dependiendo del valor asignado usando type()
+
+print("\nTipo que toma cada variable: ")
+
+print(type(entero)) # Resultado -> <class 'int'>
+print(type(double)) # Resultado -> <class 'float'>
+print(type(string)) # Resultado -> <class 'str'>
+print(type(boolean)) # Resultado -> <class 'bool'>
+print(type(array)) # Resultado -> <class 'list'>
+print(type(diccionario)) # Resultado -> <class 'set'>
+
+``` 

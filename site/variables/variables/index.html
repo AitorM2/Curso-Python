@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Tipos de variables - Documentación de Python con explicaciones y ejemplos</title>
+    <title>Variables - Documentación de Python con explicaciones y ejemplos</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Tipos de variables";
+        var mkdocs_page_name = "Variables";
         var mkdocs_page_input_path = "variables\\variables.md";
         var mkdocs_page_url = null;
       </script>
@@ -43,9 +43,23 @@
                 <li class="toctree-l1"><a class="reference internal" href="../..">Inicio</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../guia_de_instalacion/guia_instalacion/">Guía de instalación de Python usando visual studio code</a>
+                </li>
+              </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Tipos de variables</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Variables</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-variables">Tipos de variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mostrar-valores-por-consola-con-print">Mostrar valores por consola con print()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mostrar-por-pantalla-el-tipo-que-tiene-la-variable">Mostrar por pantalla el tipo que tiene la variable</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acceder-a-un-diccionario">Acceder a un diccionario</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ejemplo-de-codigo-para-probar-su-funcionamiento-implementando-todo-lo-anterior-mencionado">Ejemplo de código para probar su funcionamiento implementando todo lo anterior mencionado</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -63,7 +77,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Tipos de variables</li>
+      <li class="breadcrumb-item active">Variables</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -73,11 +87,144 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="en-python-las-variables-no-tienen-tipo-ya-que-a-la-hora-de-definir-una-variable-el-mismo-ya-sabe-que-valor-va-a-tomar-esa-variable">En python las variables no tienen tipo, ya que a la hora de definir una variable el mismo ya sabe que valor va a tomar esa variable</h1>
+<h2 id="tipos-de-variables">Tipos de variables</h2>
+<blockquote>
+<p>Las variables toman los valores de forma automática que quiere decir esto que Python es un leguaje tipado dinámico. Esto significa que el tipo de una variable se determina en tiempo de ejecución, no en tiempo de compilación. Por tanto, no es necesario declarar el tipo de una variable cuando se crea. </p>
+</blockquote>
+<ul>
+<li>Definición de una variable con un valor de tipo entero.</li>
+</ul>
+<pre><code class="language-python">entero = 1
+</code></pre>
+<ul>
+<li>Definición de una variable con un valor de tipo doble, es decir, decimal.</li>
+</ul>
+<pre><code class="language-python">double = 3.5
+</code></pre>
+<ul>
+<li>Definición de una variable de tipo string, es decir, una varible que solo almacena texto.</li>
+</ul>
+<pre><code class="language-python">string = &quot;Hola&quot;
+</code></pre>
+<ul>
+<li>Definición de una variable booleana, es decir, una variable que solo almacena True o False y como valor por defecto se le
+asigna False.</li>
+</ul>
+<pre><code class="language-python">boolean = False
+</code></pre>
+<ul>
+<li>Definición de una variable de tipo array, es decir, una colección ordenada de elementos. Los elementos pueden ser de cualquier tipo (números, cadenas, otros arrays, etc.), y se acceden mediante un índice numérico que empieza en 0. </li>
+</ul>
+<pre><code class="language-python">array = [&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;, &quot;cuatro&quot;]
+</code></pre>
+<ul>
+<li>Definición de una variable de tipo diccionario, es decir, una colección no ordenada de pares clave-valor. En lugar de usar índices numéricos como en las listas, usamos claves para acceder a los valores.</li>
+</ul>
+<pre><code class="language-python">diccionario = {
+        'Nombre': 'Paco', 
+        'Apellido': 'Martinez', 
+        'Ciudad': 'Madrid'
+}
+
+</code></pre>
+<h2 id="mostrar-valores-por-consola-con-print">Mostrar valores por consola con print()</h2>
+<blockquote>
+<p><strong>print()</strong> es una función incorporada en Python que se usa para mostrar información en la salida estándar (normalmente la consola). Puede imprimir uno o más valores, separadolos con un espacio por defecto. Voy a poner ejemplos de como se usa el <strong>print()</strong> con las variables anteriores.</p>
+</blockquote>
+<pre><code class="language-python">print(entero) # Resultado -&gt; 1
+</code></pre>
+<pre><code class="language-python">print(double) # Resultado -&gt; 3.5
+</code></pre>
+<pre><code class="language-python">print(string) # Resultado -&gt; Hola
+</code></pre>
+<pre><code class="language-python">print(boolean) # Resultado -&gt; False
+</code></pre>
+<pre><code class="language-python">print(array) # Resultado -&gt; [&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;, &quot;cuatro&quot;]
+</code></pre>
+<pre><code class="language-python">print(diccionario) # Resultado -&gt; {'Nombre': 'Paco', 'Apellido': 'Martinez', 'Ciudad': 'Madrid'}
+</code></pre>
+<h2 id="mostrar-por-pantalla-el-tipo-que-tiene-la-variable">Mostrar por pantalla el tipo que tiene la variable</h2>
+<blockquote>
+<p>También podemos usar <strong>print()</strong> para mostrar por pantalla que tipo tiene cada variable dependiendo del valor asignado usando <strong>type()</strong>.</p>
+</blockquote>
+<pre><code class="language-python">print(type(entero)) # Resultado -&gt; &lt;class 'int'&gt;
+
+print(type(double)) # Resultado -&gt; &lt;class 'float'&gt;
+
+print(type(string)) # Resultado -&gt; &lt;class 'str'&gt;
+
+print(type(boolean)) # Resultado -&gt; &lt;class 'bool'&gt;
+
+print(type(array)) # Resultado -&gt; &lt;class 'list'&gt;
+
+print(type(diccionario)) # Resultado -&gt; &lt;class 'set'&gt;
+</code></pre>
+<blockquote>
+<p>También podemos declarar multiples variables en una línea, no es recomendable pero se puede hacer.</p>
+</blockquote>
+<pre><code class="language-python">nombre, edad, es_mayor, pie = &quot;Luis&quot;, 25, True, 42.5
+</code></pre>
+<h2 id="acceder-a-un-diccionario">Acceder a un diccionario</h2>
+<blockquote>
+<p>Para acceder a un diccionario se acceder de forma parecida a una array, pero en este caso en vez de poner la posición le ponemos el valor al que queremos acceder.</p>
+</blockquote>
+<p><strong>Paso 1.</strong> Definimos el diccionario</p>
+<pre><code class="language-python">    Informacion = {
+        'Nombre': 'Pedro', 
+        'Apellido': 'Gonzalez', 
+        'Pais': 'España',
+        'Ciudad': 'Getafe',
+        'Edad': 24
+    }
+</code></pre>
+<p><strong>Paso 2.</strong> Accedemos a <code>Nombre</code> y <code>Edad</code>:</p>
+<pre><code class="language-python">    print(Informacion['Nombre'], Informacion['Edad']) # Resultado -&gt; Pedro 24
+</code></pre>
+<h2 id="ejemplo-de-codigo-para-probar-su-funcionamiento-implementando-todo-lo-anterior-mencionado">Ejemplo de código para probar su funcionamiento implementando todo lo anterior mencionado</h2>
+<p><strong>Paso 1.</strong> Creamos nuestro archivo llamado <code>ejemplo1.py</code>.</p>
+<p><strong>Paso 2.</strong> Pegaremos el siguiente código y le daremos al boton de ejecutar</p>
+<pre><code class="language-python">
+# Definición de las variables
+
+entero = 1
+double = 3.5
+string = &quot;Hola&quot;
+boolean = False
+array = [&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;, &quot;cuatro&quot;]
+diccionario = {
+    &quot;Nombre: &quot; &quot;Paco&quot;,
+    &quot;Apellido: &quot; &quot;Martinez&quot;,
+    &quot;ciudad:&quot; &quot;Madrid&quot;
+}
+
+# Mostramos por pantalla las variables
+
+print(&quot;Valor de cada variable: &quot;)
+
+print(entero) # Resultado -&gt; 1
+print(double) # Resultado -&gt; 3.5
+print(string) # Resultado -&gt; Hola
+print(boolean) # Resultado -&gt; False
+print(array) # Resultado -&gt; [&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;, &quot;cuatro&quot;]
+print(diccionario) # Resultado -&gt; {'Nombre: Paco', 'Apellido: Martinez', 'ciudad:Madrid'}
+
+# Mostramos por pantalla de que tipo tiene cada variable dependiendo del valor asignado usando type()
+
+print(&quot;\nTipo que toma cada variable: &quot;)
+
+print(type(entero)) # Resultado -&gt; &lt;class 'int'&gt;
+print(type(double)) # Resultado -&gt; &lt;class 'float'&gt;
+print(type(string)) # Resultado -&gt; &lt;class 'str'&gt;
+print(type(boolean)) # Resultado -&gt; &lt;class 'bool'&gt;
+print(type(array)) # Resultado -&gt; &lt;class 'list'&gt;
+print(type(diccionario)) # Resultado -&gt; &lt;class 'set'&gt;
+
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../.." class="btn btn-neutral float-left" title="Inicio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../guia_de_instalacion/guia_instalacion/" class="btn btn-neutral float-left" title="Guía de instalación de Python usando visual studio code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -100,7 +247,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../guia_de_instalacion/guia_instalacion/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
   </span>
