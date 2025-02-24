@@ -4,6 +4,7 @@ nav:
   - Inicio: index.md
   - Guía de instalación de Python usando visual studio code: guia_de_instalacion/guia_instalacion.md
   - Variables: variables/variables.md
+  - Strings: strings/strings.md
 
 theme:
   name: "readthedocs"  
