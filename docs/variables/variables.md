@@ -111,7 +111,12 @@ nombre, edad, es_mayor, pie = "Luis", 25, True, 42.5
 
 **Paso 1.** Creamos nuestro archivo llamado `ejemplo1.py`.
 
-**Paso 2.** Pegaremos el siguiente código y le daremos al boton de ejecutar
+**Paso 2.** Pegaremos el siguiente código y le daremos al boton de ejecutar, si no sabes cual boton es el de ejecutar
+buscaremos un boton en la parte superior como se muestra en la foto resaltado en verde.
+
+![Imágen ejecutar simple](../img/ejecutar_logo.png)
+
+![Imágen ejecutar completa](../img/ejecutar_logo2.png)
 
 ``` python
 
