@@ -144,7 +144,7 @@ contiene2 = 'es' in 'Mi coche es rojo'
 
 ``` python
 print(igual2) # Resultado -> True
-print(Noes) # Resultado -> True
+print(noes) # Resultado -> True
 print(contiene) # Resultado -> True
 print(contiene2) # Resultado -> True
 ```
