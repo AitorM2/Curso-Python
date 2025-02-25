@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Funciones - Documentación de Python con explicaciones y ejemplos</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Funciones";
+        var mkdocs_page_input_path = "funciones\\funciones.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentación de Python con explicaciones y ejemplos
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../guia_de_instalacion/guia_instalacion/">Guía de instalación de Python usando visual studio code</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../variables/variables/">Variables</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../strings/strings/">Strings</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../operadores/operadores/">Tipos de operadores</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../ifs_y_bucles/ifs_y_bucles/">IF's y Bucles</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Funciones</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creacion-de-una-funcion">Creación de una función</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pasar-argumentos-a-una-funcion">Pasar argumentos a una función</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#numeros-de-argumentos">Números de argumentos</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentación de Python con explicaciones y ejemplos</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Funciones</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aqui-se-va-a-mostrar-como-definir-una-funcion-y-que-es-una-funcion">Aquí se va a mostrar como definir una función y que es una función</h1>
+<blockquote>
+<p>Una función es un bloque de código que sólo se ejecuta cuando se llama, puede pasar datos conocidos como parámetros, a una función y además una función puede devolver datos como resultado.</p>
+</blockquote>
+<h2 id="creacion-de-una-funcion">Creación de una función</h2>
+<blockquote>
+<p>En Python una función se define usando la palabra clave <strong>def:</strong></p>
+</blockquote>
+<ul>
+<li>Ejemplo de una función básica</li>
+</ul>
+<pre><code class="language-python">def my_function():
+  print(&quot;Hola desde una función&quot;)
+</code></pre>
+<ul>
+<li>Ejemplo de como llamar a una función</li>
+</ul>
+<pre><code class="language-python">def my_function():
+  print(&quot;Hola desde una función&quot;)
+
+my_function()
+</code></pre>
+<blockquote>
+<p>Al ejecutar este ejemplo nos dará este resultado: </p>
+</blockquote>
+<pre><code class="language-cmd">Hola desde una función
+</code></pre>
+<blockquote>
+<p>Ya que al usar <code>my_function()</code> estariamos llamando a la función para que se ejecute.</p>
+</blockquote>
+<h2 id="pasar-argumentos-a-una-funcion">Pasar argumentos a una función</h2>
+<blockquote>
+<p>La información se puede pasar a las funciones como argumentos. Los argumentos se especifican después del nombre de la función, dentro del paréntesis. Puedes agregar tantos argumentos como quieras, simplemente sepáralos con una coma.</p>
+</blockquote>
+<ul>
+<li>En el siguiente ejemplo tienes una función con un argumento (fname). Cuando se llama a la función, pasamos un nombre, que se usa dentro de la función para imprimir el nombre completo:</li>
+</ul>
+<pre><code class="language-python">def my_function(fname):
+  print(fname + &quot; Martinez&quot;)
+
+my_function(&quot;Luis&quot;)
+my_function(&quot;Paco&quot;)
+my_function(&quot;Laura&quot;)
+</code></pre>
+<blockquote>
+<p>Resultado de ejecutar la función anterior:</p>
+</blockquote>
+<pre><code class="language-cmd">Luis Martinez
+Paco Martinez
+Laura Martinez
+</code></pre>
+<h2 id="numeros-de-argumentos">Números de argumentos</h2>
+<blockquote>
+<p>De forma predeterminada, se debe llamar a una función con la cantidad correcta de argumentos. Lo que significa que si tu función espera 2 argumentos, debes llamar a la función con 2 argumentos, ni uno más ni uno menos.</p>
+</blockquote>
+<ul>
+<li>Ejemplo de una función que espera 2 argumentos y le pasamos dos argumentos.</li>
+</ul>
+<pre><code class="language-python">def my_function(fname, lname):
+  print(fname + &quot; &quot; + lname)
+
+my_function(&quot;Sergio&quot;, &quot;Gonzalez&quot;)
+</code></pre>
+<blockquote>
+<p>Resultado de ejecutar la función anterior:</p>
+</blockquote>
+<pre><code class="language-cmd">Sergio Gonzalez
+</code></pre>
+<blockquote>
+<p>Si intentamos llamar a la función con 1 o 3 argumentos, obtendrás un error.</p>
+</blockquote>
+<ul>
+<li>Ejemplo de una función que espera dos argumentos y le pasamos 1.</li>
+</ul>
+<pre><code class="language-python">def my_function(fname, lname):
+  print(fname + &quot; &quot; + lname)
+
+my_function(&quot;Sergio&quot;)
+</code></pre>
+<blockquote>
+<p>Resultado de ejecutar la función anterior:</p>
+</blockquote>
+<pre><code class="language-cmd">my_function(&quot;Sergio&quot;)
+    ~~~~~~~~~~~^^^^^^^^^^
+TypeError: my_function() missing 1 required positional argument: 'lname'
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../ifs_y_bucles/ifs_y_bucles/" class="btn btn-neutral float-left" title="IF's y Bucles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../ifs_y_bucles/ifs_y_bucles/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
